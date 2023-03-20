@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Valorant-Agents/static/css/main.31d6cfe0.css",
-    "main.js": "/Valorant-Agents/static/js/main.019257c3.js",
+    "main.js": "/Valorant-Agents/static/js/main.a5f304af.js",
     "static/js/787.f7e9fc63.chunk.js": "/Valorant-Agents/static/js/787.f7e9fc63.chunk.js",
     "index.html": "/Valorant-Agents/index.html",
-    "main.019257c3.js.map": "/Valorant-Agents/static/js/main.019257c3.js.map",
+    "main.a5f304af.js.map": "/Valorant-Agents/static/js/main.a5f304af.js.map",
     "787.f7e9fc63.chunk.js.map": "/Valorant-Agents/static/js/787.f7e9fc63.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.019257c3.js"
+    "static/js/main.a5f304af.js"
   ]
 }
