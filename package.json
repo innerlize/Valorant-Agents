@@ -21,6 +21,11 @@
 		"eslint": "eslint .",
 		"prepare": "husky install"
 	},
+	"jest": {
+		"moduleNameMapper": {
+			"axios": "axios/dist/axios.js"
+		}
+	},
 	"eslintConfig": {
 		"extends": [
 			"react-app",
