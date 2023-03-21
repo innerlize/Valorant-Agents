@@ -1,0 +1,20 @@
+@font-face {
+	font-family: Valorant;
+	src: url('./files/Valorant.ttf');
+}
+
+@font-face {
+	font-family: Tungsten;
+	src: url('./files/Tungsten-Bold.ttf');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: DINNextW1GLight;
+	src: url('./files/DIN-Next-W1G-Light.otf');
+}
+
+@font-face {
+	font-family: DINNextW1GMedium;
+	src: url('./files/DIN-Next-W1G-Medium.otf');
+}
