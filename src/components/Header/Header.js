@@ -5,12 +5,16 @@ function Header() {
 	return (
 		<header id='header'>
 			<div className='header__logo-container'>
-				<img src={require('../../assets/Logo.png')} className='logo' />
+				<img
+					src={require('../../assets/Logo.png')}
+					className='logo'
+					alt='Logo'
+				/>
 			</div>
 
 			<div className='header__titles-container'>
 				<h1 className='header__title'>VAlorant Agents</h1>
-				<h2 className='header__subtitle'>
+				<h2 className='header__subtitle' data-testid='subtitle'>
 					Created by{' '}
 					<a
 						href='https://tiltedveggie.github.io/Alan-Aguilar/'
