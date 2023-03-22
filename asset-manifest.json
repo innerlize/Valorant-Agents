@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/Valorant-Agents/static/css/main.31d6cfe0.css",
-    "main.js": "/Valorant-Agents/static/js/main.019257c3.js",
+    "main.css": "/Valorant-Agents/static/css/main.f4f7f66c.css",
+    "main.js": "/Valorant-Agents/static/js/main.0c6adf24.js",
     "static/js/787.f7e9fc63.chunk.js": "/Valorant-Agents/static/js/787.f7e9fc63.chunk.js",
+    "static/media/DIN-Next-W1G-Light.otf": "/Valorant-Agents/static/media/DIN-Next-W1G-Light.a58af5c085a758702f80.otf",
+    "static/media/DIN-Next-W1G-Medium.otf": "/Valorant-Agents/static/media/DIN-Next-W1G-Medium.9f5e117ffd0324f55a6c.otf",
+    "static/media/Tungsten-Bold.ttf": "/Valorant-Agents/static/media/Tungsten-Bold.9d9c3df1b520ae9714c3.ttf",
+    "static/media/Valorant.ttf": "/Valorant-Agents/static/media/Valorant.86ec8370af32018a2391.ttf",
     "index.html": "/Valorant-Agents/index.html",
-    "main.019257c3.js.map": "/Valorant-Agents/static/js/main.019257c3.js.map",
+    "main.f4f7f66c.css.map": "/Valorant-Agents/static/css/main.f4f7f66c.css.map",
+    "main.0c6adf24.js.map": "/Valorant-Agents/static/js/main.0c6adf24.js.map",
     "787.f7e9fc63.chunk.js.map": "/Valorant-Agents/static/js/787.f7e9fc63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.019257c3.js"
+    "static/css/main.f4f7f66c.css",
+    "static/js/main.0c6adf24.js"
   ]
 }
