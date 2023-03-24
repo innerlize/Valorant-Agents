@@ -8,9 +8,26 @@
 	list-style-type: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	color: #ffffff;
 }
 
 a {
 	color: inherit;
+}
+
+button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+	border: none;
+	background: none;
+
+	cursor: pointer;
 }
