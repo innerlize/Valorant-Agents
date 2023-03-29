@@ -1,7 +1,7 @@
 import React from 'react';
 import './AgentBox.css';
 
-function AgentBox(agent) {
+function AgentBox({ agent, setDataForPanel }) {
 	return (
 		<div className='agent-box' data-testid='agent-card'>
 			<div className='agent-box__content-wrapper'>
@@ -18,7 +18,9 @@ function AgentBox(agent) {
 							{agent.displayName}
 						</p>
 					</div>
-					<button className='agent-box__button button'>
+					<button
+						className='agent-box__button button'
+						onClick={() => setDataForPanel(agent.uuid)}>
 						<span className='button__inner'>
 							<span className='button__slide'></span>
 							<span className='button__content' role='agent-button'>
