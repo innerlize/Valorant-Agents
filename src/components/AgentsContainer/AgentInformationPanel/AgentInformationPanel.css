@@ -1,0 +1,120 @@
+.panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #03201b;
+
+	font-family: DINNextW1GLight;
+
+	overflow-y: scroll;
+	z-index: 10000;
+}
+
+.panel::-webkit-scrollbar {
+	display: none;
+}
+
+.panel__btn-close {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	padding: 5px 20px;
+
+	font-family: Tungsten;
+	font-size: 48px;
+
+	background-color: #03201b;
+	z-index: 12000;
+
+	cursor: pointer;
+}
+
+.panel__port-cont {
+	display: flex;
+	justify-content: center;
+
+	max-height: 342px;
+
+	background-color: #dc3d4b;
+}
+
+.panel__port {
+	position: relative;
+	top: 20px;
+
+	width: 352px;
+	height: 375px;
+
+	object-fit: cover;
+}
+
+.panel__inf {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	padding: 0 30px 50px 30px;
+	margin-top: 93px;
+}
+
+.inf__name {
+	font-family: Tungsten;
+	font-size: 90px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.inf__title {
+	margin-bottom: 12px;
+
+	font-family: DINNextW1GMedium;
+	font-size: 24px;
+	color: #dc3d4b;
+	text-transform: uppercase;
+}
+
+.inf__wrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.inf__role {
+	font-family: Tungsten;
+	font-size: 48px;
+	text-transform: uppercase;
+}
+
+.inf__role-icon {
+	width: 30px;
+	height: 30px;
+}
+
+.inf__desc {
+	font-size: 20px;
+}
+
+.inf_ablties-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.ablty_wrapper {
+	margin-bottom: 20px;
+}
+
+.inf__ablty-name {
+	font-family: DINNextW1GMedium;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.inf__ablty-icon {
+	width: 60px;
+}
