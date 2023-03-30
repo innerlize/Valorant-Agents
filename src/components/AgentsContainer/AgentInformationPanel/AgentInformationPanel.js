@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAgent } from '../../../hooks/useAgent.js';
+import './AgentInformationPanel.css';
 
 function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
 	const { agent, loading, error } = useAgent(
@@ -9,7 +10,7 @@ function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
 
 	if (renderPanel)
 		return (
-			<div>
+			<div className='panel'>
 				{error && (
 					<div>
 						<p>Error: {error.message}</p>
@@ -29,56 +30,61 @@ function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
 
 				{agent && (
 					<div role='panel'>
-						<div onClick={() => restartDataForPanel()}>X</div>
+						<div
+							className='panel__btn-close'
+							onClick={() => restartDataForPanel()}>
+							X
+						</div>
 
-						<div>
+						<div className='panel__port-cont'>
 							<img
 								src={agent.fullPortrait}
 								alt={`${agent.displayName} Portrait`}
-								width='300px'
+								className='panel__port'
 							/>
 						</div>
 
-						<div>
-							<div>
-								<p>&gt; {agent.displayName} &lt;</p>
-							</div>
+						<div className='panel__inf inf'>
+							<p className='inf__name'>&gt; {agent.displayName} &lt;</p>
 
 							<div>
-								<p>&#x2f;&#x2f; Role</p>
-								<div>
-									<p>{agent.role.displayName}</p>
+								<p className='inf__title'>&#x2f;&#x2f; Role</p>
+								<div className='inf__wrapper'>
+									<p className='inf__role'>{agent.role.displayName}</p>
 									<img
 										src={agent.role.displayIcon}
 										alt={`${agent.displayName} Role Icon`}
-										width='30px'
+										className='inf__role-icon'
 									/>
 								</div>
 							</div>
 
 							<div>
-								<p>&#x2f;&#x2f; Biography</p>
-								<p>{agent.description}</p>
+								<p className='inf__title'>&#x2f;&#x2f; Biography</p>
+								<p className='inf__desc'>{agent.description}</p>
 							</div>
 
 							<div>
-								<p>&#x2f;&#x2f; Abilities</p>
-								<div>
+								<p className='inf__title'>&#x2f;&#x2f; Abilities</p>
+								<div className='inf_ablties-wrapper'>
 									{agent.abilities?.map(ability => {
-										return (
-											<div key={ability.displayName} role='agent-ability'>
-												<div>
-													<p>{ability.displayName}</p>
-													<img
-														src={ability.displayIcon}
-														alt={`${agent.displayName} '${ability.displayName}' Ability Icon`}
-														width='50px'
-													/>
-												</div>
+										if (ability.slot !== 'Passive')
+											return (
+												<div key={ability.displayName} role='agent-ability'>
+													<div className='inf__wrapper ablty_wrapper'>
+														<p className='inf__ablty-name'>
+															{ability.displayName}
+														</p>
+														<img
+															src={ability.displayIcon}
+															alt={`${agent.displayName} '${ability.displayName}' Ability Icon`}
+															className='inf__ablty-icon'
+														/>
+													</div>
 
-												<p>{ability.description}</p>
-											</div>
-										);
+													<p className='inf__desc'>{ability.description}</p>
+												</div>
+											);
 									})}
 								</div>
 							</div>
