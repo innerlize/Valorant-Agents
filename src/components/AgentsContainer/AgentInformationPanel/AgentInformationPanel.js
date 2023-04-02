@@ -11,31 +11,29 @@ function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
 	if (renderPanel)
 		return (
 			<div className='panel'>
+				<div className='panel__btn-close' onClick={() => restartDataForPanel()}>
+					X
+				</div>
+
 				{error && (
-					<div>
-						<p>Error: {error.message}</p>
+					<div className='panel__error-cont'>
+						<p className='panel__error'>Error: {error.message}</p>
 					</div>
 				)}
 
 				{loading && (
-					<div>
+					<div className='panel__loading-cont'>
 						<img
 							src={require('../../../assets/Tactibear.gif')}
-							width='100px'
 							alt='Tactibear GIF'
+							width='300px'
 						/>
-						<p>Loading...</p>
+						<p className='panel__loading-msg'>Loading...</p>
 					</div>
 				)}
 
 				{agent && (
-					<div role='panel'>
-						<div
-							className='panel__btn-close'
-							onClick={() => restartDataForPanel()}>
-							X
-						</div>
-
+					<div className='panel__content-cont' role='panel'>
 						<div className='panel__port-cont'>
 							<img
 								src={agent.fullPortrait}
