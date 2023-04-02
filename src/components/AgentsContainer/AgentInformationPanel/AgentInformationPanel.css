@@ -118,3 +118,137 @@
 .inf__ablty-icon {
 	width: 60px;
 }
+
+@media only screen and (min-width: 768px) {
+	.panel__btn-close {
+		padding: 5px 38px;
+
+		font-size: 80px;
+	}
+
+	.panel__port-cont {
+		max-height: 640px;
+	}
+
+	.panel__port {
+		top: 40px;
+
+		width: 671px;
+		height: 702px;
+	}
+
+	.panel__inf {
+		gap: 60px;
+
+		padding: 0 50px 50px;
+		margin-top: 142px;
+	}
+
+	.inf__name {
+		font-size: 128px;
+	}
+
+	.inf__title {
+		margin-bottom: 16px;
+
+		font-size: 32px;
+	}
+
+	.inf__wrapper {
+		gap: 20px;
+	}
+
+	.inf__role {
+		font-size: 70px;
+	}
+
+	.inf__desc {
+		font-size: 24px;
+	}
+
+	.inf_ablties-wrapper {
+		gap: 50px;
+	}
+
+	.inf__ablty-name {
+		font-size: 40px;
+	}
+
+	.inf__ablty-icon {
+		width: 70px;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.panel__content-cont {
+		display: flex;
+
+		height: 100%;
+	}
+
+	.panel__btn-close {
+		padding: 0 26px;
+
+		font-size: 64px;
+
+		background-color: #dc3d4b;
+	}
+
+	.panel__port-cont {
+		width: 50%;
+		max-height: 100vh;
+	}
+
+	.panel__port {
+		top: 0;
+
+		width: 100%;
+		height: 100%;
+	}
+
+	.panel__inf {
+		gap: 60px;
+
+		width: 50%;
+
+		padding: 40px;
+		margin-top: 0;
+
+		overflow-y: scroll;
+	}
+
+	.panel__inf::-webkit-scrollbar {
+		display: none;
+	}
+
+	.inf__name {
+		font-size: 96px;
+
+		text-align: left;
+	}
+
+	.inf__title {
+		font-size: 24px;
+	}
+
+	.inf__role {
+		font-size: 64px;
+	}
+
+	.inf__role-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	.inf__desc {
+		font-size: 20px;
+	}
+
+	.inf__ablty-name {
+		font-size: 36px;
+	}
+
+	.inf__ablty-icon {
+		width: 60px;
+	}
+}
