@@ -26,7 +26,7 @@ function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
 						<img
 							src={require('../../../assets/Tactibear.gif')}
 							alt='Tactibear GIF'
-							width='300px'
+							className='panel__loading-gif'
 						/>
 						<p className='panel__loading-msg'>Loading...</p>
 					</div>
