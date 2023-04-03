@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import AgentInformationPanel from './AgentInformationPanel.js';
 import agentsMock from '../../../agentsMock/agentsMock.js';
 import axios from 'axios';
@@ -27,11 +27,13 @@ afterEach(() => {
 test('Should render "Loading" div when there is no data yet', async () => {
 	render(<AgentInformationPanel agentID={agentID} renderPanel={true} />);
 
-	const loadingGif = await screen.findByAltText(/tactibear gif/i);
-	const loadingText = await screen.findByText(/loading.../i);
+	waitFor(() => {
+		const loadingGif = screen.findByAltText(/tactibear gif/i);
+		const loadingText = screen.findByText(/loading.../i);
 
-	expect(loadingGif).toBeInTheDocument();
-	expect(loadingText).toBeInTheDocument();
+		expect(loadingGif).toBeInTheDocument();
+		expect(loadingText).toBeInTheDocument();
+	});
 });
 
 test('Should render "Error" message when API call fails', async () => {
