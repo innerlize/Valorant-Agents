@@ -31,10 +31,10 @@
 	top: 0;
 	right: 0;
 
-	padding: 5px 20px;
+	padding: 1.214vw 4.854vw;
 
 	font-family: Tungsten;
-	font-size: 48px;
+	font-size: 11.65vw;
 
 	background-color: #03201b;
 	z-index: 12000;
@@ -64,17 +64,17 @@
 	display: flex;
 	justify-content: center;
 
-	max-height: 342px;
+	max-height: 83.01vw;
 
 	background-color: #dc3d4b;
 }
 
 .panel__port {
 	position: relative;
-	top: 20px;
+	top: 4.854vw;
 
-	width: 352px;
-	height: 375px;
+	width: 85.437vw;
+	height: 91.019vw;
 
 	object-fit: cover;
 }
@@ -84,13 +84,13 @@
 	flex-direction: column;
 	gap: 40px;
 
-	padding: 0 30px 50px 30px;
-	margin-top: 93px;
+	padding: 0 7.282vw 12.136vw;
+	margin-top: 22.573vw;
 }
 
 .inf__name {
 	font-family: Tungsten;
-	font-size: 90px;
+	font-size: 20vw;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -99,7 +99,7 @@
 	margin-bottom: 12px;
 
 	font-family: DINNextW1GMedium;
-	font-size: 24px;
+	font-size: 5.825vw;
 	color: #dc3d4b;
 	text-transform: uppercase;
 }
@@ -112,7 +112,7 @@
 
 .inf__role {
 	font-family: Tungsten;
-	font-size: 48px;
+	font-size: 11.65vw;
 	text-transform: uppercase;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .inf__desc {
-	font-size: 20px;
+	font-size: 4.854vw;
 }
 
 .inf_ablties-wrapper {
@@ -137,12 +137,12 @@
 
 .inf__ablty-name {
 	font-family: DINNextW1GMedium;
-	font-size: 32px;
+	font-size: 7.767vw;
 	text-transform: uppercase;
 }
 
 .inf__ablty-icon {
-	width: 60px;
+	width: 14.563vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -186,6 +186,10 @@
 
 	.inf__role {
 		font-size: 70px;
+	}
+
+	.inf__role-icon {
+		width: 50px;
 	}
 
 	.inf__desc {
