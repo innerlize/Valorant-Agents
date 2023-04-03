@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Valorant-Agents/static/css/main.82cd533a.css",
+    "main.css": "/Valorant-Agents/static/css/main.24959479.css",
     "main.js": "/Valorant-Agents/static/js/main.5de57f47.js",
     "static/js/787.f7e9fc63.chunk.js": "/Valorant-Agents/static/js/787.f7e9fc63.chunk.js",
     "static/media/DIN-Next-W1G-Light.otf": "/Valorant-Agents/static/media/DIN-Next-W1G-Light.a58af5c085a758702f80.otf",
@@ -9,12 +9,12 @@
     "static/media/Tungsten-Bold.ttf": "/Valorant-Agents/static/media/Tungsten-Bold.9d9c3df1b520ae9714c3.ttf",
     "static/media/Valorant.ttf": "/Valorant-Agents/static/media/Valorant.86ec8370af32018a2391.ttf",
     "index.html": "/Valorant-Agents/index.html",
-    "main.82cd533a.css.map": "/Valorant-Agents/static/css/main.82cd533a.css.map",
+    "main.24959479.css.map": "/Valorant-Agents/static/css/main.24959479.css.map",
     "main.5de57f47.js.map": "/Valorant-Agents/static/js/main.5de57f47.js.map",
     "787.f7e9fc63.chunk.js.map": "/Valorant-Agents/static/js/787.f7e9fc63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82cd533a.css",
+    "static/css/main.24959479.css",
     "static/js/main.5de57f47.js"
   ]
 }
