@@ -15,10 +15,21 @@ body {
 }
 
 main {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	color: #ffffff;
+}
+
+main::before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	left: 2.427vw;
+	background-color: #ffffff;
+	z-index: 8000;
 }
 
 a {
@@ -35,4 +46,10 @@ button {
 	background: none;
 
 	cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+	main::before {
+		left: 30px;
+	}
 }
