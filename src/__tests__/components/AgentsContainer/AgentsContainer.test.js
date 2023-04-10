@@ -1,25 +1,28 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import AgentsContainer from './AgentsContainer.js';
-import agentsMock from '../../agentsMock/agentsMock.js';
+import AgentsContainer from '../../../components/AgentsContainer/AgentsContainer.js';
+import agentsMock from '../../../agentsMock/agentsMock.js';
+import { PanelContext } from '../../../contexts/Panel.context.js';
 import axios from 'axios';
 
-jest.mock('axios');
-
 beforeEach(() => {
-	axios.get.mockResolvedValue({
+	jest.spyOn(axios, 'get').mockResolvedValue({
 		data: { data: agentsMock },
 		loading: true,
-		error: 'Something went wrong D:'
+		error: 'Something went wrong! D:'
 	});
 });
 
 afterEach(() => {
-	axios.mockRestore();
+	jest.clearAllMocks();
 });
 
 test('Should render "Loading" div when there is no data yet', async () => {
-	render(<AgentsContainer />);
+	render(
+		<PanelContext.Provider value={PanelContext}>
+			<AgentsContainer />
+		</PanelContext.Provider>
+	);
 
 	waitFor(() => {
 		const loadingGif = screen.findByAltText(/tactibear gif/i);
@@ -31,20 +34,22 @@ test('Should render "Loading" div when there is no data yet', async () => {
 });
 
 test('Should render "Error" message when API call fails', async () => {
-	axios.get.mockRejectedValue(new Error('Something went wrong D:'));
+	axios.get.mockRejectedValue(new Error('Something went wrong! D:'));
 
 	render(<AgentsContainer />);
 
-	const errorElement = await screen.findByText(
-		'Error: Something went wrong D:'
-	);
+	const errorElement = await screen.findByText('Something went wrong! D:');
 
 	expect(errorElement).toBeInTheDocument();
 });
 
 describe('Should render Agents cards when API responds successfully', () => {
 	beforeEach(() => {
-		render(<AgentsContainer />);
+		render(
+			<PanelContext.Provider value={PanelContext}>
+				<AgentsContainer />
+			</PanelContext.Provider>
+		);
 	});
 
 	test('Should render exactly 3 cards', async () => {
