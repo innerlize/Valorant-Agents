@@ -1,12 +1,14 @@
-import React from 'react';
-import { useAgent } from '../../../hooks/useAgent.js';
+import React, { useContext } from 'react';
+import { PanelContext } from '../../contexts/Panel.context.js';
+import {
+	ErrorComponent,
+	LoadingComponent
+} from '../FetchStatusComponents/FetchStatusComponents.js';
 import './AgentInformationPanel.css';
 
-function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
-	const { agent, loading, error } = useAgent(
-		'https://valorant-api.com/v1/agents/',
-		agentID
-	);
+function AgentInformationPanel() {
+	const { agent, loading, error, renderPanel, restartDataForPanel } =
+		useContext(PanelContext);
 
 	if (renderPanel)
 		return (
@@ -15,22 +17,9 @@ function AgentInformationPanel({ agentID, renderPanel, restartDataForPanel }) {
 					X
 				</div>
 
-				{error && (
-					<div className='panel__error-cont'>
-						<p className='panel__error'>Error: {error.message}</p>
-					</div>
-				)}
+				{error && <ErrorComponent error={error} />}
 
-				{loading && (
-					<div className='panel__loading-cont'>
-						<img
-							src={require('../../../assets/Tactibear.gif')}
-							alt='Tactibear GIF'
-							className='panel__loading-gif'
-						/>
-						<p className='panel__loading-msg'>Loading...</p>
-					</div>
-				)}
+				{loading && <LoadingComponent />}
 
 				{agent && (
 					<div className='panel__content-cont' role='panel'>

@@ -42,24 +42,6 @@
 	cursor: pointer;
 }
 
-.panel__loading-cont {
-	width: 200px;
-	font-family: DINNextW1GMedium;
-	font-size: 26px;
-	text-align: center;
-}
-
-.panel__loading-gif {
-	width: 100%;
-	height: 100%;
-}
-
-.panel__error-cont {
-	font-family: DINNextW1GMedium;
-	font-size: 16px;
-	color: #fa4454;
-}
-
 .panel__port-cont {
 	display: flex;
 	justify-content: center;
