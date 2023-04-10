@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PanelContext } from '../../../contexts/Panel.context.js';
 import './AgentBox.css';
 
-function AgentBox({ agent, setDataForPanel }) {
+function AgentBox({ agent }) {
+	const { setDataForPanel } = useContext(PanelContext);
+
 	return (
 		<div className='agent-box' data-testid='agent-card'>
 			<div className='agent-box__content-wrapper'>
