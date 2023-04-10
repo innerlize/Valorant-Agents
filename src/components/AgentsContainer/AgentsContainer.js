@@ -1,67 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useFetch } from '../../hooks/useFetch.js';
-import { useScrollLock } from '../../hooks/useScrollLock.js';
 import AgentBox from './AgentBox/AgentBox.js';
-import AgentInformationPanel from './AgentInformationPanel/AgentInformationPanel.js';
+import {
+	ErrorComponent,
+	LoadingComponent
+} from '../FetchStatusComponents/FetchStatusComponents.js';
 import './AgentsContainer.css';
 
 function AgentsContainer() {
-	const [agentID, setAgentID] = useState();
-	const [renderPanel, setRenderPanel] = useState(false);
-
 	const { agents, loading, error } = useFetch(
 		'https://valorant-api.com/v1/agents'
 	);
 
-	const { lockScroll, unlockScroll } = useScrollLock();
-
-	function setDataForPanel(id) {
-		setAgentID(id);
-		setRenderPanel(true);
-		lockScroll();
-	}
-
-	function restartDataForPanel() {
-		setAgentID();
-		setRenderPanel(false);
-		unlockScroll();
-	}
-
 	return (
 		<section id='agents-container'>
 			<div className='agents-container__wrapper'>
-				{error && (
-					<p className='agents-container__error'>Error: {error.message}</p>
-				)}
+				{error && <ErrorComponent error={error} />}
 
-				{loading && (
-					<div className='agents-container__loading'>
-						<img
-							src={require('../../assets/Tactibear.gif')}
-							alt='Tactibear GIF'
-						/>
-						<p>Loading...</p>
-					</div>
-				)}
+				{loading && <LoadingComponent />}
 
 				{agents?.map(agent => {
 					return (
 						agent.isPlayableCharacter && (
-							<AgentBox
-								key={agent.uuid}
-								agent={agent}
-								setDataForPanel={setDataForPanel}
-							/>
+							<AgentBox key={agent.uuid} agent={agent} />
 						)
 					);
 				})}
 			</div>
-
-			<AgentInformationPanel
-				agentID={agentID}
-				renderPanel={renderPanel}
-				restartDataForPanel={restartDataForPanel}
-			/>
 		</section>
 	);
 }
