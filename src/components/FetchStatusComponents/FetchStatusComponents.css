@@ -1,0 +1,22 @@
+.status__cont {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.status__asset {
+	width: 200px;
+	height: 200px;
+}
+
+.status__text {
+	font-family: DINNextW1GMedium;
+	font-size: 26px;
+	text-align: center;
+}
+
+.error-code {
+	color: #fa4454;
+	margin-bottom: 15px;
+}
